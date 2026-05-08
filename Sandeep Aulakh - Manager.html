@@ -531,6 +531,83 @@ footer .links a:hover { color: var(--accent); }
 }
 
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav { padding: 0 20px; flex-wrap: wrap; height: auto; min-height: 52px; }
+  nav ul { gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+  nav ul a { font-size: 12px; }
+
+  /* Layout */
+  .container { padding: 0 20px; }
+  section { padding: 64px 0 48px; }
+  section:first-of-type { padding-top: 80px; }
+
+  /* Hero */
+  .hero-inner h1 { font-size: 32px; }
+  .hero-desc { font-size: 15px; }
+  .hero-chips { gap: 6px; }
+  .chip { font-size: 10px; padding: 4px 10px; }
+
+  /* Impact bar - 2 columns on mobile */
+  .impact-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .impact-item { padding: 14px; }
+  .impact-item .val { font-size: 22px; }
+  .impact-item .lbl { font-size: 11px; }
+
+  /* Section headers */
+  .sh-title { font-size: 24px; }
+  .sh-desc { font-size: 14px; }
+
+  /* Engagement cards - stack on mobile */
+  .eng-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .eng-left { border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+  .eng-scale { font-size: 12px; }
+
+  /* Tech grid - 1 column */
+  .tech-grid { grid-template-columns: 1fr; }
+
+  /* Framework levels - 2 columns */
+  .levels-row { grid-template-columns: repeat(2, 1fr); }
+
+  /* Workshop stats - 2 columns */
+  .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-box .num { font-size: 22px; }
+
+  /* Workshop detail grid - 1 column */
+  .ws-detail-grid { grid-template-columns: 1fr; }
+
+  /* Conference grid - 2 columns */
+  .conf-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Builder grid - 1 column */
+  .builder-grid { grid-template-columns: 1fr; }
+
+  /* Footer - stack */
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+  }
+  footer .links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller phones */
+  .hero-inner h1 { font-size: 28px; }
+  .impact-bar { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .levels-row { grid-template-columns: 1fr; }
+  .conf-grid { grid-template-columns: 1fr; }
+
+  nav ul { width: 100%; justify-content: flex-start; }
+}
 </style>
 </head>
 <body>
